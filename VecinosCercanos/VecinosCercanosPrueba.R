@@ -3,7 +3,7 @@ library(e1071)
 library(caTools)
 library(class)
 
-filename = "D:/GithubRepos/FinalProyAplics2022/Clustering/Dry_Bean_Dataset.csv"
+filename = "D:/GithubRepos/FinalProyAplics2022/Dry_Bean_Dataset.csv"
 porotos <- read.csv(filename, header = TRUE, sep = ";")
 
 covars = ncol(porotos) 
