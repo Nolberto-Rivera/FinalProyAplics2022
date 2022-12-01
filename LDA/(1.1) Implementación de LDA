@@ -1,0 +1,19 @@
+
+# (1.1) Implementación de LDA
+
+library(MASS)
+library(e1071)
+library(caTools)
+library(class)
+
+# Función que arroja matriz de confusión
+# (considerando lda)
+# dados conjuntos de entrenamiento y testeo
+
+lda_cm <- function(traing, testg, k) {
+	covars = ncol(traing)
+	modelo <- lda(Class ~ ., data = traing)
+	prediction <- predict(modelo, newdata=testg[,-covars])$class
+	cm <- table(prediction, testg[,17])
+	return(cm)
+}

@@ -1,0 +1,9 @@
+
+# (1.2) Instanciación
+
+library(class)
+
+filename = "C:/Users/nolbe/Desktop/2022-2/MAT281 - Aplics de la Mat en Ing (Adelantado)/4 Evaluaciones/Proyecto/DryBeanDataset/Dry_Bean_Dataset.csv"
+porotos <- read.csv(filename, header = TRUE, sep = ";", dec = ",")
+
+validacion_cruzada(porotos, 10, lda_cm, 0)
